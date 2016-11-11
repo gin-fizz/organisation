@@ -8,7 +8,7 @@ MongoDb is geschikt voor grote data het is schaalbaar en werk zonder relaties in
 
 ### Voorbeeld eventuele database structuur
 
-```json
+```bson
 {
  user_id: "1",
  username: "Maliek Meersschaert",
