@@ -24,11 +24,11 @@ MongoDb is geschikt voor grote data het is schaalbaar en werk zonder relaties in
             "Jill Stein": 1
           }
         }
+      }
     }
+  }
 }
-}
-}
- ```
+```
  
 ### Veldnamen
 * users: veld met informatie van user
