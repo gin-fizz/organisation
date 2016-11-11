@@ -32,11 +32,11 @@ MongoDb is geschikt voor grote data het is schaalbaar en werk zonder relaties in
  
 ### Veldnamen
 * users: veld met informatie van user
-    * user_id: unieke id per user
-    * username: naam van de user ==> string
-    * password: paswoord van de user ==> hash
-    * collection polls: alle polls die bij de user horen
-        * id: unieke id van de poll    
-        * name: naam van de poll ==> string    
-        * collection options: de mogelijkheden van de poll
-            * "Option": <value>: de keuze en bijhorende value
+    * user_id: unieke id per user (eventueel later automatisch gegenereerd voor anonieme polls)
+        * username: naam van de user ==> string
+        * password: paswoord van de user ==> hash
+        * collection polls: alle polls die bij de user horen
+            * id: unieke id van de poll    
+                * name: naam van de poll ==> string    
+                * collection options: de mogelijkheden van de poll
+                    * "Option": <value>: de keuze en bijhorende value
