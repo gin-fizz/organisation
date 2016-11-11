@@ -30,7 +30,7 @@ MongoDb is geschikt voor grote data het is schaalbaar en werk zonder relaties in
 }
  ```
  
- ### Veldnamen
+### Veldnamen
 
 * user_id: unieke id per user
 * username: naam van de user ==> string
