@@ -6,31 +6,68 @@ MongoDB is een open source document-georiënteerde database en is geschreven in 
 
 MongoDb is geschikt voor grote data het is schaalbaar en werk zonder relaties in tegenstelling tot bijvoorbeeld SQLite. Omdat we in ons project geen echte relaties nodig hebben is de keuze daarom ook makkelijk gemaakt voor MongoDB.
 
-### Voorbeeld eventuele database structuur
+## Database structuur
+
+### Collection polls
 
 ```json
 {
-  "users": {
-    "useridofmaliek": {
-      "username": "Maliek Meersschaert",
-      "password": "SOME HASH",
-      "polls": {
-        "1": {
-          "name": "Amerikaanse verkiezingen",
-          "options": {
-            "Donald Trump": 10,
-            "Hilary Clinton": 9,
-            "Gary Johnson": 2,
-            "Jill Stein": 1
-          }
-        }
-      }
+  "_id" : "1111c298aeb541d0776a9556",
+  "name": "Amerikaanse verkiezingen",
+  "options": {
+    "Donald Trump": 10,
+    "Hilary Clinton": 9,
+    "Gary Johnson": 2,
+    "Jill Stein": 1
+  },
+  "user": {
+    "_id" : "45894298bee541d0776a4445",
+    "username": "maliekmeersschaert"
+  }
+}
+{
+  "_id" : "2222c298aeb541d0776a9556",
+  "name": "Lievelingskleur",
+  "options": {
+    "Geel": 1,
+    "Blauw": 2
+  },
+  "user": {
+    "id": "useridofmaliek",
+    "username": "maliekmeersschaert"
+  }
+}
+{
+  "_id" : "3333c298aeb541d0776a9556",
+  "name": "Kom je naar mijn feestje?",
+  "options": {
+    "ja": 30,
+    "nee": 5
+  }
+}
+```
+
+### Collection users
+
+```json
+{
+  "_id" : "45894298bee541d0776a4445",
+  "username": "maliekmeersschaert",
+  "name": "Maliek Meersschaert",
+  "password": "SOME HASH",
+  "polls": {
+    "1": {
+      "name": "Amerikaanse verkiezingen"
+    },
+    "2": {
+      "name": "Lievelingskleur"
     }
   }
 }
 ```
  
-### Veldnamen
+## Veldnamen
+
 * users: veld met informatie van user
     * user_id: unieke id per user (eventueel later automatisch gegenereerd voor anonieme polls)
         * username: naam van de user ==> string
