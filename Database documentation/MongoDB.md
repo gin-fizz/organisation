@@ -10,37 +10,33 @@ MongoDb is geschikt voor grote data het is schaalbaar en werk zonder relaties in
 
 ```json
 {
- "user_id": "1",
- "username": "Maliek Meersschaert",
- "password": "SOME HASH",
- "polls": [
-     {
-      "poll_id": "1",
-      "name": "Amerikaanse verkiezingen",
-      "options": ["Donald Trump", "Hilary Clinton", "Gary Johnson", "Jill Stein"],
-      "values": [10,9,2,1]
-    },
-    {
-      "poll_id": "2",
-      "name": "Lievelingskleur",
-      "options": ["Geel", "Blauw"],
-      "values": [1,2]
+  "users": {
+    "useridofmaliek": {
+      "username": "Maliek Meersschaert",
+      "password": "SOME HASH",
+      "polls": {
+        "1": {
+          "name": "Amerikaanse verkiezingen",
+          "options": {
+            "Donald Trump": 10,
+            "Hilary Clinton": 9,
+            "Gary Johnson": 2,
+            "Jill Stein": 1
+          }
+        }
     }
-  ]
+}
+}
 }
  ```
  
 ### Veldnamen
-
-* user_id: unieke id per user
-* username: naam van de user ==> string
-* password: paswoord van de user ==> hash
-* collection polls: alle polls die bij de user horen
-
-    * poll_id: unieke id van de poll
-    
-    * name: naam van de poll ==> string
-    
-    * options: de mogelijkheden van de poll ==> array van strings
-
-    * values: de waarden die bij elke keuze hoort ==> array van integers
+* users: veld met informatie van user
+    * user_id: unieke id per user
+    * username: naam van de user ==> string
+    * password: paswoord van de user ==> hash
+    * collection polls: alle polls die bij de user horen
+        * id: unieke id van de poll    
+        * name: naam van de poll ==> string    
+        * collection options: de mogelijkheden van de poll
+            * "Option": <value>: de keuze en bijhorende value
