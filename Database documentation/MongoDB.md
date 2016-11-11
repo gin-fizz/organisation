@@ -8,23 +8,23 @@ MongoDb is geschikt voor grote data het is schaalbaar en werk zonder relaties in
 
 ### Voorbeeld eventuele database structuur
 
-```bson
+```json
 {
- user_id: "1",
- username: "Maliek Meersschaert",
- password: "SOME HASH",
- polls: [
+ "user_id": "1",
+ "username": "Maliek Meersschaert",
+ "password": "SOME HASH",
+ "polls": [
      {
-      poll_id: "1",
-      name: "Amerikaanse verkiezingen",
-      options: ["Donald Trump", "Hilary Clinton", "Gary Johnson", "Jill Stein"],
-      values: [10,9,2,1]
+      "poll_id": "1",
+      "name": "Amerikaanse verkiezingen",
+      "options": ["Donald Trump", "Hilary Clinton", "Gary Johnson", "Jill Stein"],
+      "values": [10,9,2,1]
     },
     {
-      poll_id: "2",
-      name: "Lievelingskleur",
-      options: ["Geel", "Blauw"],
-      values: [1,2]
+      "poll_id": "2",
+      "name": "Lievelingskleur",
+      "options": ["Geel", "Blauw"],
+      "values": [1,2]
     }
   ]
 }
